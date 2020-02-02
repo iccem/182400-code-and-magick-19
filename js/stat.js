@@ -52,6 +52,16 @@ var getGapOnStart = function (names) {
   return (CLOUD_WIDTH - (BAR_WIDTH * names.length)) / (names.length + 1);
 };
 
+var getMaxElement = function (arr) {
+  var maxElement = arr[0];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > maxElement) {
+      maxElement = arr[i];
+    }
+  }
+  return maxElement;
+};
+
 var renderBars = function (ctx, names, times) {
   var maxTime = getMaxElement(times);
   var gapOnStart = getGapOnStart(names);
@@ -68,16 +78,6 @@ var renderBars = function (ctx, names, times) {
     renderName(ctx, currentX, currentName);
     renderTime(ctx, currentX, currentTime, currentTimePositionY);
   }
-};
-
-var getMaxElement = function (arr) {
-  var maxElement = arr[0];
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] > maxElement) {
-      maxElement = arr[i];
-    }
-  }
-  return maxElement;
 };
 
 window.renderStatistics = function (ctx, names, times) {
