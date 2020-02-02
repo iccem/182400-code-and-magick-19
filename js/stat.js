@@ -64,7 +64,6 @@ var renderBars = function (ctx, names, times) {
     var currentX = CLOUD_X + gapOnStart + ((BAR_WIDTH + gapOnStart) * currentRate);
     var currentY = CLOUD_HEIGHT - currentBarHeight - GAP * 3;
     var currentName = names[i];
-
     renderBar(ctx, currentX, currentY, BAR_WIDTH, currentBarHeight, currentName);
     renderName(ctx, currentX, currentName);
     renderTime(ctx, currentX, currentTime, currentTimePositionY);
