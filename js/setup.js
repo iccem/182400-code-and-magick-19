@@ -13,7 +13,7 @@ userDialog.classList.remove('hidden');
 var similarListElement = document.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
 
-var getRandomArbitrary = function getRandomArbitrary(arr) {
+var getRandomArbitrary = function (arr) {
   var randomNumber = [Math.floor(Math.random() * arr.length)];
   return arr[randomNumber];
 };
